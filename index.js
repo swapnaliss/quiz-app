@@ -1,5 +1,7 @@
 var readlineSync = require("readline-sync");
 
+var chalk = require("chalk");
+
 var score = 0;
 
 var highScores = [
@@ -47,11 +49,11 @@ function play(question, answer) {
 
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     // branching
-    console.log("right!");
+     console.log(chalk.green("right!"));
     score = score + 1;
    
   } else {
-    console.log("wrong!");
+    console.log(chalk.red("wrong!"));
     
   }
 
