@@ -2,6 +2,17 @@ var readlineSync = require("readline-sync");
 
 var score = 0;
 
+var highScores = [
+  {
+    name: "Swapnali",
+    score: 3,
+  },
+  {
+    name: "Vijay",
+    score: 2,
+  },
+];
+
 var questions = [
   {
     question: "Who is invented Javascript ?",
@@ -54,5 +65,15 @@ function game() {
     play(currentQuestion.question, currentQuestion.answer);
   }
 }
+function showScores() {
+  console.log("YAY! your score is: ", score);
+
+  console.log(
+    "check out the high scores , if you should be there ping me and i'll update it"
+  );
+
+  highScores.map((score) => console.log(score.name, " : ", score.score));
+}
 welcome();
 game();
+showScores();
