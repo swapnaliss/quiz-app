@@ -1,5 +1,7 @@
 var readlineSync = require("readline-sync");
 
+var score = 0;
+
 var questions = [
   {
     question: "Who is invented Javascript ?",
@@ -35,12 +37,15 @@ function play(question, answer) {
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     // branching
     console.log("right!");
+    score = score + 1;
    
   } else {
     console.log("wrong!");
+    
   }
 
-  
+  console.log("current score : ", score);
+  console.log("----------");
 }
 
 function game() {
