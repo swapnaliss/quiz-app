@@ -22,3 +22,10 @@ var questions = [
     answer: "Java",
   },
 ];
+
+function welcome() {
+  var userName = readlineSync.question("what's your name ?");
+
+  console.log("Welcome " + userName + " to do you know about JAVASCRIPT ?");
+}
+welcome();
