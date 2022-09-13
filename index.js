@@ -28,4 +28,26 @@ function welcome() {
 
   console.log("Welcome " + userName + " to do you know about JAVASCRIPT ?");
 }
+
+function play(question, answer) {
+  var userAnswer = readlineSync.question(question);
+
+  if (userAnswer.toUpperCase() === answer.toUpperCase()) {
+    // branching
+    console.log("right!");
+   
+  } else {
+    console.log("wrong!");
+  }
+
+  
+}
+
+function game() {
+  for (var i = 0; i < questions.length; i++) {
+    var currentQuestion = questions[i];
+    play(currentQuestion.question, currentQuestion.answer);
+  }
+}
 welcome();
+game();
