@@ -50,10 +50,13 @@ function play(question, answer) {
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     // branching
      console.log(chalk.green("right!"));
+     
     score = score + 1;
    
   } else {
     console.log(chalk.red("wrong!"));
+    console.log("right answer is:", answer);
+    
     
   }
 
